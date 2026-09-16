@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIN 3 PULANG PISAU - Berakhlak Mulia, Cerdas, & Berprestasi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Playfair -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        accent: {
+                            50: '#f0f9ff',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(20, 83, 45, 0.88) 0%, rgba(2, 132, 199, 0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .signature-font {
+            font-family: 'Playfair Display', cursive;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-900 text-emerald-100 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-mx-auto flex flex-col md:flex-row justify-between items-center gap-2 mx-auto">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center"><i class="fa-solid fa-phone mr-1.5 text-accent-500"></i> (0513) 21890</span>
+                <span class="hidden sm:inline flex items-center"><i class="fa-solid fa-envelope mr-1.5 text-accent-500"></i> min3pulangpisau@kemenag.go.id</span>
+                <span class="hidden md:inline flex items-center"><i class="fa-solid fa-clock mr-1.5 text-accent-500"></i> Senin - Sabtu: 07.00 - 14.00 WIB</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="bg-amber-400 text-brand-900 font-bold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider">PPDB T.A. 2026/2027</span>
+                <a href="#ppdb" class="hover:underline text-amber-300 font-medium">Pendaftaran Dibuka! Klik Disini</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & School Name -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center p-2 text-white shadow-md group-hover:scale-105 transition-transform">
+                        <!-- Ikhlas Beramal Kemenag Emblem SVG -->
+                        <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/>
+                            <path d="M50 15 L58 35 L80 35 L62 48 L69 70 L50 56 L31 70 L38 48 L20 35 L42 35 Z" fill="#FBBF24"/>
+                            <path d="M50 25 L50 75 M25 50 L75 50" stroke="currentColor" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-semibold tracking-widest text-accent-600 uppercase">Kementerian Agama RI</span>
+                        <span class="text-xl font-extrabold text-brand-900 tracking-tight leading-none group-hover:text-brand-700 transition">MIN 3 PULANG PISAU</span>
+                        <span class="block text-[11px] text-slate-500 font-medium">Kabupaten Pulang Pisau</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="#beranda" class="px-3 py-2 text-sm font-semibold text-brand-700 rounded-lg bg-brand-50">Beranda</a>
+                    <a href="#profil" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-100 rounded-lg transition">Profil</a>
+                    <a href="#akademik" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-100 rounded-lg transition">Akademik</a>
+                    <a href="#fasilitas" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-100 rounded-lg transition">Fasilitas</a>
+                    <a href="#berita" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-100 rounded-lg transition">Berita</a>
+                    <a href="#ppdb" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-100 rounded-lg transition">PPDB</a>
+                    <a href="#kontak" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-100 rounded-lg transition">Hubungi Kami</a>
+                </nav>
+
+                <!-- CTA Button Header -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <a href="#ppdb" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition transform active:scale-95 flex items-center gap-2">
+                        <i class="fa-solid fa-id-card"></i>
+                        <span>PPDB Online</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" type="button" class="p-2.5 rounded-xl text-slate-700 hover:text-brand-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="hidden lg:hidden border-t border-slate-200 bg-white shadow-xl" id="mobile-menu">
+            <div class="px-4 pt-3 pb-6 space-y-2">
+                <a href="#beranda" class="block px-4 py-2.5 text-base font-semibold text-brand-700 bg-brand-50 rounded-xl">Beranda</a>
+                <a href="#profil" class="block px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 rounded-xl">Profil</a>
+                <a href="#akademik" class="block px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 rounded-xl">Akademik</a>
+                <a href="#fasilitas" class="block px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 rounded-xl">Fasilitas</a>
+                <a href="#berita" class="block px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 rounded-xl">Berita</a>
+                <a href="#ppdb" class="block px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 rounded-xl">PPDB</a>
+                <a href="#kontak" class="block px-4 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 rounded-xl">Hubungi Kami</a>
+                <div class="pt-2">
+                    <a href="#ppdb" class="w-full text-center bg-brand-600 text-white font-semibold py-3 px-4 rounded-xl shadow block">
+                        Daftar PPDB Online 2026
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative hero-gradient text-white py-24 lg:py-36 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-accent-900/60"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl space-y-6">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-emerald-200 text-xs sm:text-sm font-medium">
+                    <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>Madrasah Ibtidaiyah Negeri Favorit & Unggulan</span>
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                    Selamat Datang di <br>
+                    <span class="text-amber-300">MIN 3 PULANG PISAU</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-emerald-100 font-light leading-relaxed">
+                    "Mewujudkan Generasi Islami yang Berakhlak Mulia, Cerdas, Kreatif, Mandiri, dan Berprestasi di Era Digital."
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <a href="#ppdb" class="bg-amber-400 hover:bg-amber-300 text-brand-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 text-center text-base flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-lg"></i>
+                        <span>Daftar PPDB Online</span>
+                    </a>
+                    <a href="#profil" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/30 backdrop-blur-sm transition text-center text-base flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Jelajahi Profil</span>
+                    </a>
+                </div>
+
+                <!-- Highlight Stats -->
+                <div class="pt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/15 mt-8">
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-amber-300">A</div>
+                        <div class="text-xs text-emerald-200">Akreditasi Sekolah</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">350+</div>
+                        <div class="text-xs text-emerald-200">Siswa Aktif</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">25+</div>
+                        <div class="text-xs text-emerald-200">Guru & Staff Professional</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-amber-300">100%</div>
+                        <div class="text-xs text-emerald-200">Kelulusan Berkualitas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sambutan Kepala Sekolah Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Photo Container -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-sm lg:max-w-none">
+                        <!-- Decorative Backdrop Elements -->
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-emerald-100 rounded-3xl -z-10"></div>
+                        <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-sky-100 rounded-3xl -z-10"></div>
+                        
+                        <div class="overflow-hidden rounded-3xl shadow-2xl border-4 border-white bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Masriana, S.Ag - Kepala Sekolah MIN 3 Pulang Pisau" 
+                                 class="w-full h-auto object-cover transform hover:scale-105 transition duration-500"
+                                 onerror="this.src='https://placehold.co/600x700/15803d/ffffff?text=Masriana,+S.Ag'">
+                        </div>
+
+                        <!-- Badge Overlay -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-slate-100">
+                            <h3 class="font-bold text-slate-900 text-lg">Masriana, S.Ag</h3>
+                            <p class="text-xs font-semibold text-brand-600">Kepala Sekolah MIN 3 Pulang Pisau</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Speech Container -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-brand-700 font-semibold text-sm tracking-wide uppercase">
+                        <span class="w-8 h-0.5 bg-brand-600"></span>
+                        <span>Sambutan Kepala Sekolah</span>
+                    </div>
+
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Mengantarkan Generasi Unggul, Beriman, dan Menguasai Teknologi
+                    </h2>
+
+                    <div class="space-y-4 text-slate-600 text-base leading-relaxed">
+                        <p class="italic text-slate-700 font-medium border-l-4 border-amber-400 pl-4 py-1">
+                            "Assalamu'alaikum Warahmatullahi Wabarakatuh,"
+                        </p>
+                        <p>
+                            Selamat datang di website resmi <strong>MIN 3 Pulang Pisau</strong>. Puji syukur kehadirat Allah SWT yang telah memberikan rahmat dan hidayah-Nya, sehingga platform digital ini dapat hadir sebagai wadah komunikasi, transparansi informasi, dan media silaturahmi antara madrasah, orang tua, peserta didik, serta masyarakat luas.
+                        </p>
+                        <p>
+                            Di era transformasi digital ini, MIN 3 Pulang Pisau berkomitmen tidak hanya mencetak generasi yang cerdas secara akademis, namun juga memiliki kedalaman iman, akhlak mulia, serta keterampilan abad 21. Kami menerapkan kurikulum terpadu berbasis keagamaan dan ilmu pengetahuan umum.
+                        </p>
+                        <p>
+                            Terima kasih atas kepercayaan Bapak/Ibu orang tua siswa yang telah mengamanahkan pendidikan putra-putrinya kepada kami. Mari bersama-sama wujudkan madrasah yang mandiri dan berprestasi!
+                        </p>
+                    </div>
+
+                    <!-- Signature & Name Tag -->
+                    <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Kepala Madrasah</p>
+                            <h4 class="text-lg font-bold text-brand-900">Masriana, S.Ag</h4>
+                            <p class="text-xs text-slate-500">NIP. 19740512 200312 2 001</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="signature-font text-3xl text-brand-800 font-bold tracking-wide italic">Masriana</span>
+                            <p class="text-[10px] text-slate-400">Tanda Tangan Digital Resmi</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil & Visi Misi Section -->
+    <section id="profil" class="py-20 bg-slate-100/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-700 font-semibold text-sm tracking-wide uppercase">Profil Singkat</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Visi & Misi Madrasah</h2>
+                <p class="text-slate-600 mt-3 text-base">Landasan utama dalam menyelenggaran pendidikan berkualitas berbasis Islami di Kabupaten Pulang Pisau.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Visi Card -->
+                <div class="bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -right-10 -bottom-10 opacity-10 text-white">
+                        <i class="fa-solid fa-eye text-9xl"></i>
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-amber-300 text-2xl mb-6 border border-white/20">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <span class="text-xs font-bold tracking-widest text-amber-300 uppercase">Visi MIN 3 Pulang Pisau</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold mt-2 mb-6 leading-snug">
+                            "Terwujudnya Peserta Didik yang Berakhlak Karimah, Cerdas, Kreatif, Mandiri, dan Peduli Lingkungan."
+                        </h3>
+                    </div>
+                    <div class="pt-6 border-t border-white/20 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-amber-300"></i>
+                        <span class="text-sm text-emerald-100">Ditetapkan melalui Keputusan Kepala Madrasah</span>
+                    </div>
+                </div>
+
+                <!-- Misi Card -->
+                <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-lg border border-slate-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-accent-50 text-accent-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <span class="text-xs font-bold tracking-widest text-accent-600 uppercase">Misi Utama Kami</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-6">Langkah Strategis Pencapaian</h3>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">1</span>
+                                <span class="text-slate-600 text-sm sm:text-base">Menanamkan nilai-nilai keagamaan melalui pembiasaan shalat berjamaah, tahfidz Al-Qur'an, dan kajian akhlak.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">2</span>
+                                <span class="text-slate-600 text-sm sm:text-base">Menyelenggarakan pembelajaran saintifik dan berbasis TI yang aktif, inovatif, serta menyenangkan.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">3</span>
+                                <span class="text-slate-600 text-sm sm:text-base">Mengembangkan minat, bakat, dan potensi siswa melalui kegiatan ekstrakurikuler yang beragam.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">4</span>
+                                <span class="text-slate-600 text-sm sm:text-base">Mewujudkan lingkungan sekolah yang bersih, asri, sehat, dan berbudaya lingkungan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Unggulan / Akademik Section -->
+    <section id="akademik" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-700 font-semibold text-sm tracking-wide uppercase">Kurikulum & Ekstrakurikuler</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Program Unggulan Madrasah</h2>
+                <p class="text-slate-600 mt-3 text-base">Program pembelajaran komprehensif yang memadukan pendidikan keagamaan Islami dan sains modern.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Program 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-book-quran"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Tahfidz & Tilawah Al-Qur'an</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Program pembiasaan hafalan Al-Qur'an (Juz 30 & pilihan) dilengkapi dengan tajwid yang benar dan bimbingan seni baca Al-Qur'an secara insentif.
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">Program Utama</span>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 bg-sky-100 text-sky-700 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-sky-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Klub Sains & Matematika</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Wadah pembinaan bakat siswa dalam bidang IPA dan Matematika untuk persiapan Kompetisi Sains Madrasah (KSM) dan Olimpiade Nasional.
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-sky-700 bg-sky-50 px-3 py-1 rounded-full">Akademik Prestasi</span>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Bahasa Arab & Inggris</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Pembelajaran bahasa asing aplikatif dengan pendekatan praktis harian untuk melatih kepercayaan diri peserta didik berkomunikasi.
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-amber-800 bg-amber-50 px-3 py-1 rounded-full">Bahasa Internasional</span>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-indigo-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Literasi Komputer & Digital</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Pengenalan dasar-dasar teknologi informasi, pengoperasian komputer, serta pemanfaatan internet secara sehat dan aman.
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full">Teknologi Modern</span>
+                </div>
+
+                <!-- Program 5 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 bg-rose-100 text-rose-700 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-rose-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-campground"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Pramuka & UKS</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Pembentukan karakter kedisiplinan, kemandirian, jiwa kepemimpinan, serta kepedulian sosial melalui kegiatan Kepramukaan.
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-rose-700 bg-rose-50 px-3 py-1 rounded-full">Ekstrakurikuler Wajib</span>
+                </div>
+
+                <!-- Program 6 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-purple-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-drum"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Seni Hadrah & Drumband</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Pengembangan bakat seni musik keagamaan dan musik kelompok untuk mengasah kreativitas serta kerja sama tim siswa.
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">Seni & Budaya</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas Section -->
+    <section id="fasilitas" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 font-semibold text-sm tracking-wide uppercase">Sarana & Prasarana</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Fasilitas Penunjang Belajar</h2>
+                <p class="text-slate-400 mt-3 text-base">Kami menyediakan sarana pembelajaran modern untuk kenyamanan dan kebersihan lingkungan belajar anak.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Facility Item 1 -->
+                <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700/60 hover:border-emerald-500 transition duration-300">
+                    <div class="text-emerald-400 text-3xl mb-4"><i class="fa-solid fa-mosque"></i></div>
+                    <h4 class="text-lg font-bold mb-2">Musholla Madrasah</h4>
+                    <p class="text-slate-400 text-sm">Tempat ibadah nyaman untuk shalat berjamaah, hafalan Qur'an, dan kegiatan keagamaan.</p>
+                </div>
+                <!-- Facility Item 2 -->
+                <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700/60 hover:border-emerald-500 transition duration-300">
+                    <div class="text-sky-400 text-3xl mb-4"><i class="fa-solid fa-desktop"></i></div>
+                    <h4 class="text-lg font-bold mb-2">Laboratorium Komputer</h4>
+                    <p class="text-slate-400 text-sm">Ruangan ber-AC dilengkapi dengan perangkat PC terbaru dan akses internet cepat.</p>
+                </div>
+                <!-- Facility Item 3 -->
+                <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700/60 hover:border-emerald-500 transition duration-300">
+                    <div class="text-amber-400 text-3xl mb-4"><i class="fa-solid fa-book-bookmark"></i></div>
+                    <h4 class="text-lg font-bold mb-2">Perpustakaan Digital</h4>
+                    <p class="text-slate-400 text-sm">Koleksi buku bacaan, ensiklopedia, dan buku pelajaran terpadu untuk literasi siswa.</p>
+                </div>
+                <!-- Facility Item 4 -->
+                <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700/60 hover:border-emerald-500 transition duration-300">
+                    <div class="text-rose-400 text-3xl mb-4"><i class="fa-solid fa-volleyball"></i></div>
+                    <h4 class="text-lg font-bold mb-2">Lapangan Olahraga</h4>
+                    <p class="text-slate-400 text-sm">Lapangan serbaguna untuk olahraga bulutangkis, bola voli, futsal, dan upacara.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berita & Kegiatan Terbaru Section -->
+    <section id="berita" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-brand-700 font-semibold text-sm tracking-wide uppercase">Informasi Terbaru</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Berita & Kegiatan Madrasah</h2>
+                </div>
+                <a href="#" class="mt-4 md:mt-0 text-brand-700 hover:text-brand-800 font-semibold text-sm inline-flex items-center gap-2">
+                    <span>Lihat Semua Berita</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- News Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- News Card 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop" 
+                                 alt="KSM Tingkat Kabupaten" 
+                                 class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/16a34a/ffffff?text=Berita+MIN+3'">
+                            <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Prestasi</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-slate-400 mb-3 gap-4">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> 12 September 2026</span>
+                                <span><i class="fa-regular fa-user mr-1"></i> Admin</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-3 hover:text-brand-700 transition leading-snug">
+                                Siswa MIN 3 Pulang Pisau Raih Juara 1 Kompetisi Sains Madrasah 2026
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed line-clamp-3">
+                                Kebanggaan luar biasa bagi keluarga besar MIN 3 Pulang Pisau atas prestasi gemilang yang diraih oleh ananda peserta KSM bidang Matematika Terintegrasi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openNewsModal('Siswa MIN 3 Pulang Pisau Raih Juara 1 KSM 2026', 'Kebanggaan luar biasa bagi keluarga besar MIN 3 Pulang Pisau atas prestasi gemilang yang diraih oleh ananda peserta KSM bidang Matematika Terintegrasi tingkat Kabupaten Pulang Pisau. Selamat atas perjuangan gigih para siswa dan pembimbing!')" 
+                                class="w-full py-2.5 px-4 bg-slate-100 hover:bg-brand-600 hover:text-white text-brand-800 text-sm font-semibold rounded-xl transition text-center flex items-center justify-center gap-2">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Peringatan Maulid Nabi" 
+                                 class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Berita+MIN+3'">
+                            <span class="absolute top-4 left-4 bg-sky-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Kegiatan</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-slate-400 mb-3 gap-4">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> 05 September 2026</span>
+                                <span><i class="fa-regular fa-user mr-1"></i> Humas</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-3 hover:text-brand-700 transition leading-snug">
+                                Peringatan Hari Besar Islam Penuh Khidmat Bersama Seluruh Wali Murid
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed line-clamp-3">
+                                MIN 3 Pulang Pisau menyelenggarakan peringatan keagamaan yang dirangkai dengan lomba hafalan Al-Qur'an dan tausiyah keislaman.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openNewsModal('Peringatan Hari Besar Islam Penuh Khidmat', 'MIN 3 Pulang Pisau menyelenggarakan peringatan keagamaan yang dirangkai dengan lomba hafalan Al-Qur\'an dan tausiyah keislaman bersama wali murid. Acara ini berlangsung hangat dan penuh berkah.')" 
+                                class="w-full py-2.5 px-4 bg-slate-100 hover:bg-brand-600 hover:text-white text-brand-800 text-sm font-semibold rounded-xl transition text-center flex items-center justify-center gap-2">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/80 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Sosialisasi Digital" 
+                                 class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/eab308/ffffff?text=Berita+MIN+3'">
+                            <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Pengumuman</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-slate-400 mb-3 gap-4">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> 28 Agustus 2026</span>
+                                <span><i class="fa-regular fa-user mr-1"></i> Panitia PPDB</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-3 hover:text-brand-700 transition leading-snug">
+                                Penerimaan Peserta Didik Baru (PPDB) T.A. 2026/2027 Resmi Dibuka
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed line-clamp-3">
+                                Pendaftaran calon siswa baru MIN 3 Pulang Pisau kini dapat dilakukan secara mudah melalui sistem pendaftaran online terpadu.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openNewsModal('PPDB T.A. 2026/2027 Resmi Dibuka', 'Pendaftaran calon siswa baru MIN 3 Pulang Pisau kini dapat dilakukan secara mudah melalui sistem pendaftaran online terpadu. Silakan persiapkan berkas seperti Akta Kelahiran, KK, dan pasfoto calon siswa.')" 
+                                class="w-full py-2.5 px-4 bg-slate-100 hover:bg-brand-600 hover:text-white text-brand-800 text-sm font-semibold rounded-xl transition text-center flex items-center justify-center gap-2">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PPDB Section -->
+    <section id="ppdb" class="py-20 bg-gradient-to-r from-brand-800 to-accent-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 border border-white/20 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <span class="bg-amber-400 text-brand-950 font-bold text-xs uppercase px-3 py-1 rounded-full">Penerimaan Peserta Didik Baru</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bergabunglah Bersama MIN 3 Pulang Pisau</h2>
+                        <p class="text-emerald-100 text-base leading-relaxed">
+                            Siapkan masa depan cemerlang putra-putri Anda bersama pendidikan Islam terpadu yang berkarakter, inovatif, dan berprestasi.
+                        </p>
+                        <div class="flex flex-wrap gap-4 text-xs sm:text-sm text-emerald-100 pt-2">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-amber-300"></i> Bebas Biaya Pendaftaran</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-amber-300"></i> Kuota Terbatas</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-amber-300"></i> Sistem Online & Transparan</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 text-center lg:text-right">
+                        <button onclick="openPPDBModal()" class="w-full sm:w-auto bg-amber-400 hover:bg-amber-300 text-brand-950 font-extrabold text-lg px-8 py-4 rounded-xl shadow-lg transition transform hover:scale-105 inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Formulir PPDB Online</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="kontak" class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+                
+                <!-- School Info Column -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center p-2 text-white">
+                            <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/>
+                                <path d="M50 15 L58 35 L80 35 L62 48 L69 70 L50 56 L31 70 L38 48 L20 35 L42 35 Z" fill="#FBBF24"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-wide">MIN 3 PULANG PISAU</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Madrasah Ibtidaiyah Negeri 3 Pulang Pisau merupakan lembaga pendidikan dasar di bawah naungan Kementerian Agama Republik Indonesia.
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 hover:bg-brand-600 text-white rounded-xl flex items-center justify-center transition" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 hover:bg-pink-600 text-white rounded-xl flex items-center justify-center transition" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 hover:bg-red-600 text-white rounded-xl flex items-center justify-center transition" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Quick Links -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="text-white font-bold text-base mb-4">Navigasi Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#beranda" class="hover:text-amber-400 transition">Beranda</a></li>
+                        <li><a href="#profil" class="hover:text-amber-400 transition">Profil & Visi Misi</a></li>
+                        <li><a href="#akademik" class="hover:text-amber-400 transition">Program Unggulan</a></li>
+                        <li><a href="#fasilitas" class="hover:text-amber-400 transition">Fasilitas</a></li>
+                        <li><a href="#berita" class="hover:text-amber-400 transition">Berita Terbaru</a></li>
+                        <li><a href="#ppdb" class="hover:text-amber-400 transition">Info PPDB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="text-white font-bold text-base mb-4">Kontak Resmi</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
+                            <span class="text-slate-400">Jalan Hidayatullah No. 181, Kahayan Hilir, Kabupaten Pulang Pisau, Kalimantan Tengah</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-amber-400"></i>
+                            <span class="text-slate-400">(0513) 21890 / +62 821-5555-3321</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-amber-400"></i>
+                            <span class="text-slate-400">min3pulangpisau@kemenag.go.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Map Placeholder Column -->
+                <div class="lg:col-span-3">
+                    <h4 class="text-white font-bold text-base mb-4">Peta Lokasi</h4>
+                    <div class="bg-slate-800 rounded-2xl h-44 overflow-hidden relative border border-slate-700/80 flex items-center justify-center group">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=600&auto=format&fit=crop" 
+                             alt="Peta Lokasi MIN 3 Pulang Pisau" 
+                             class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition duration-300">
+                        <div class="absolute inset-0 bg-slate-950/40 flex flex-col items-center justify-center p-4 text-center">
+                            <i class="fa-solid fa-map-location-dot text-amber-400 text-3xl mb-2"></i>
+                            <span class="text-xs text-white font-semibold">Jalan Hidayatullah No. 181</span>
+                            <span class="text-[10px] text-slate-300">Pulang Pisau, Kalimantan Tengah</span>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-3 py-1 rounded-lg transition">
+                                Buka di Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 MIN 3 Pulang Pisau. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-400">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-slate-400">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- News Detail Modal -->
+    <div id="news-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100">
+            <button onclick="closeNewsModal()" class="absolute top-4 right-4 w-9 h-9 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mb-4">
+                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">Detail Berita</span>
+            </div>
+            <h3 id="modal-news-title" class="text-xl font-bold text-slate-900 mb-4"></h3>
+            <p id="modal-news-content" class="text-slate-600 text-sm leading-relaxed mb-6"></p>
+            <button onclick="closeNewsModal()" class="w-full py-3 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl transition">
+                Tutup Informasi
+            </button>
+        </div>
+    </div>
+
+    <!-- PPDB Form Modal -->
+    <div id="ppdb-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 max-h-[90vh] overflow-y-auto">
+            <button onclick="closePPDBModal()" class="absolute top-4 right-4 w-9 h-9 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Formulir Pendaftaran PPDB</h3>
+                <p class="text-xs text-slate-500 mt-1">MIN 3 Pulang Pisau T.A. 2026/2027</p>
+            </div>
+
+            <form onsubmit="handlePPDBSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Lengkap Calon Siswa</label>
+                    <input type="text" required placeholder="Masukkan nama sesuai Akta" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">NIK / No. Akta Kelahiran</label>
+                    <input type="text" required placeholder="16 digit NIK" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Orang Tua / Wali</label>
+                    <input type="text" required placeholder="Nama Ayah / Ibu" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp / HP Active</label>
+                    <input type="tel" required placeholder="08xxxxxxxxxx" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl transition shadow-md">
+                    Kirim Pendaftaran
+                </button>
+            </form>
+            <div id="ppdb-success-msg" class="hidden mt-4 p-3 bg-emerald-100 text-emerald-800 rounded-xl text-xs text-center font-medium">
+                <i class="fa-solid fa-circle-check mr-1"></i> Pendaftaran berhasil dikirim! Panitia PPDB akan menghubungi Anda.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close Mobile Menu on Link Click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // News Modal Helpers
+        function openNewsModal(title, content) {
+            document.getElementById('modal-news-title').innerText = title;
+            document.getElementById('modal-news-content').innerText = content;
+            document.getElementById('news-modal').classList.remove('hidden');
+        }
+
+        function closeNewsModal() {
+            document.getElementById('news-modal').classList.add('hidden');
+        }
+
+        // PPDB Modal Helpers
+        function openPPDBModal() {
+            document.getElementById('ppdb-modal').classList.remove('hidden');
+            document.getElementById('ppdb-success-msg').classList.add('hidden');
+        }
+
+        function closePPDBModal() {
+            document.getElementById('ppdb-modal').classList.add('hidden');
+        }
+
+        // Handle PPDB Form Submission
+        function handlePPDBSubmit(e) {
+            e.preventDefault();
+            const msg = document.getElementById('ppdb-success-msg');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                closePPDBModal();
+            }, 3000);
+        }
+
+        // Sticky Header Shadow Effect on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
